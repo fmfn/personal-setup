@@ -1,0 +1,16 @@
+[global]
+device=gpu
+floatX=float32
+mode=FAST_RUN
+
+[lib]
+cnmem=0.99
+
+[nvcc]
+fastmath=True
+
+[blas]
+ldflag = -L/usr/lib/openblas-base -lopenblas
+
+[DebugMode]
+check_finite=1
