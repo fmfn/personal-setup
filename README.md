@@ -12,27 +12,32 @@ fail when booting with the GTX 1080).
   sudo apt-get install -y git
   git clone https://github.com/fmfn/ubuntu-gpu-setup.git
   ```
+  
 3. Run the following commands:
   ```
   cd ubuntu-gpu-setup
   bash setup_0.sh
   bash setup_CUDA_CUDNN_run.sh
   ```
+  
 4. Create a virtual environment:
   ```
   bash setup_venv.sh
   source ~/venvs/deeplearning/bin/activate
   ```
+  
 5. Install Keras (together with numpy and scipy) and add `.theanorc` to its
 appropriate path.
   ```
   bash theano-keras.sh
   ```
+  
 6. Install a number of important python packages.
   ```
   bash python_packages.sh
   bash dark_jupyter.sh
   ```
+  
 7. Mount sdb2 for that extra storage space!
   - Use `lsblk` to see all disks
   - Follow this [tutorial](http://www.thegeekstuff.com/2012/08/2tb-gtp-parted/)
