@@ -1,7 +1,9 @@
 mkdir CUDA
 cd CUDA
 
-echo "WILL NOW DOWNLOAD CUDA AND CUDNN, THIS MIGHT TAKE A WHILE..."
+echo ""
+echo "*** WILL NOW DOWNLOAD CUDA AND CUDNN, THIS MIGHT TAKE A WHILE... ***"
+echo ""
 wget https://dl.dropboxusercontent.com/u/5268799/ubuntu1404-cuda8-cudnn5.zip
 unzip ubuntu1404-cuda8-cudnn5.zip
 
