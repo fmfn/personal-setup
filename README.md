@@ -1,6 +1,12 @@
-# Setting up Deeplearning on Ubuntu 14-04 Server with a GTX 1080
+# Setting up Deeplearning on Ubuntu 14.04 Server with a GTX 1080
 
-Steps to get a working environment (with cuda 8 rc):
+This repository contains the necessary steps to get a working deeplearning
+environment with CUDA-8-rc on ubuntu 14.04 server with a GTX 1080. As of July,
+ 2016, CUDA-8 is not yet released and the GTX 1080 requires it to run properly.
+ So, in order to orchestrate drivers, CUDA, CuDNN, and ubuntu to work together,
+ a slightly convoluted back and forth is necessary. Hopefully this guide
+ provides all the necessary tools, and it should be obsolete mid August 2016,
+ when CUDA-8 is released.
 
 1. Install ubuntu, **boot in recovery mode than resume boot**, this will make it such
 that the default graphic drivers are not initialized (the default graphics driver will

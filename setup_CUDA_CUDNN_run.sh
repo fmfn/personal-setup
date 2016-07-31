@@ -7,7 +7,6 @@ echo ""
 wget https://dl.dropboxusercontent.com/u/5268799/ubuntu1404-cuda8-cudnn5.zip
 unzip ubuntu1404-cuda8-cudnn5.zip
 
-
 echo ""
 echo "*** WILL NOW INSTALL CUDA, REMEMBER TO DECLINE INSTALLATION OF DRIVERS! ***"
 echo ""
