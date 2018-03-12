@@ -75,3 +75,18 @@ appropriate path.
   - Give write access to non-sudo users
     - `cd /data`
     - `sudo chmod -R -v 777 *`
+
+# Updating CUDA
+To update CUDA in a system that is already working follow these steps:
+
+1. Download the newest driver for your video card and install it (it is a `.run` file, follow the directions in setup step 1 in this repo).
+2. Download the new CUDA `.run` file. Once finished run: `sudo sh cuda_{version-number}.run` **Remember to NOT install drivers!**
+3. Update the following environment variables:
+    - Copy and paste `echo $PATH`
+    - Change the cuda version `...:/usr/local/cuda-8.0/bin:...` --> `...:/usr/local/cuda-9.1/bin:...`
+    - Export the entire `PATH`.
+    - Do the same with `LD_LIBRARY_PATH`.
+    - Alternatively try these two steps
+        - export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
+        - export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64\
+4. `sudo reboot`
