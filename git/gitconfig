@@ -1,0 +1,25 @@
+
+[core]
+       editor = vim
+[pull]
+       rebase = true
+[alias]
+       # show a beautiful print out of the commit log
+       lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %C(bold)(%cr)%Creset' --abbrev-commit --date=relative
+       # list all the local branches + creation date and more info
+       ls = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:bold blue)%(align:45,left)%(refname:short)%(end)%(color:reset) - %(align:18,middle)%(authorname)%(end) - %(align:18,left)(%(color:yellow)%(committerdate:relative)%(color:reset))%(end) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject)'
+       spush = commit --amend -m"$(git log --format=%B -n1)" -m"[SKIP CI]"
+[user]
+       name = fmfn
+       email = fmfnogueira@gmail.com
+[push]
+       default = current
+[filter "lfs"]
+       clean = git-lfs clean -- %f
+       smudge = git-lfs smudge -- %f
+       process = git-lfs filter-process
+       required = true
+[pull]
+       rebase = true
+[credential]
+        helper = cache
